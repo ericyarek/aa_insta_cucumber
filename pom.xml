@@ -65,7 +65,7 @@
 	<build>
 		<plugins>
 
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.0</version>
@@ -78,7 +78,7 @@
 			</plugin>
 
 			<!-- It will generate report if we run the project as a "mvn verify" command. -->
-			<plugin>
+			<!-- <plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
 				<version>3.15.0</version>
@@ -92,10 +92,10 @@
 						<configuration>
 							<projectname>TestProject</projectname>
 							<!-- path to the report that will be generated -->
-							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>
+					<!--		<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>
 							<!-- path to the json file that will be used to genetrate report -->
 							<!-- it has to match the one on the cukesrunner -->
-							<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
+					<!--		<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
 							<enableflashcharts></enableflashcharts>
 						</configuration>
 					</execution>
@@ -104,7 +104,7 @@
 			</plugin>
 			
 			
-			<plugins>
+			<plugins> -->
 				<!-- Edit this one -->
         <plugin>
             <groupId>com.github.temyers</groupId>
