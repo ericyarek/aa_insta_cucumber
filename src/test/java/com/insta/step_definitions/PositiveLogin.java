@@ -32,7 +32,7 @@ public class PositiveLogin {
 	public void the_user_clicks_on_the_Sign_in_link() {
 		loginPage.logInButton.click();
 		BrowserUtils.waitFor(2);
-		loginPage.notNow.click();
+		//loginPage.notNow.click();
 	}
 	
 	@Then("label {string} should be displayed")
