@@ -65,7 +65,7 @@
 	<build>
 		<plugins>
 
-			<!--<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.0</version>
@@ -78,7 +78,7 @@
 			</plugin>
 
 			<!-- It will generate report if we run the project as a "mvn verify" command. -->
-			<!-- <plugin>
+			 <plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
 				<version>3.15.0</version>
@@ -92,10 +92,10 @@
 						<configuration>
 							<projectname>TestProject</projectname>
 							<!-- path to the report that will be generated -->
-					<!--		<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>
+							<outputdirectory>${project.build.directory}/cucumber-html-reports</outputdirectory>
 							<!-- path to the json file that will be used to genetrate report -->
 							<!-- it has to match the one on the cukesrunner -->
-					<!--		<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
+							<cucumberoutput>${project.build.directory}/target/cucumber.json</cucumberoutput>
 							<enableflashcharts></enableflashcharts>
 						</configuration>
 					</execution>
@@ -104,56 +104,9 @@
 			</plugin>
 			
 			
-			<plugins> -->
+			
 				<!-- Edit this one -->
-        <plugin>
-            <groupId>com.github.temyers</groupId>
-            <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-            <version>4.2.0</version>
-            <executions>
-                <execution>
-                    <id>generateRunners</id>
-                    <phase>generate-test-sources</phase>
-                    <goals>
-                        <goal>generateRunners</goal>
-                    </goals>
-                    <configuration>
-                        <glue>
-				<!-- Edit this one -->
-                            <package>com.insta.step_definitions</package>
-                        </glue>
-                        <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>
-                        <featuresDirectory>src/test/resources/com/insta/features</featuresDirectory>
-                        <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
-                        <namingPattern>Parallel{c}IT</namingPattern>
-                        <!-- One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature. -->
-                        <parallelScheme>FEATURE</parallelScheme>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-				
-				<plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-failsafe-plugin</artifactId>
-            <version>2.19.1</version>
-            <executions>
-                <execution>
-                    <id>acceptance-test</id>
-                    <phase>integration-test</phase>
-                    <goals>
-                        <goal>integration-test</goal>
-                    </goals>
-                    <configuration>
-                        <forkCount>10</forkCount>
-                        <reuseForks>true</reuseForks>
-                        <includes>
-                            <include>**/*IT.class</include>
-                        </includes>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+       
 			
 				
 				<!-- Edit this one -->
