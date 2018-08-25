@@ -10,5 +10,5 @@ Feature: Login as Teacher Student TeachLead
 		
 		Examples:
 		    |email                   |password      |
-		    |ericyarek@gmail.com  	 |Fh&J1#erNa9	|
+		    |ericyarek@gmail.com  	 |	|
 		    
